@@ -16,10 +16,9 @@ const arrayObj = [
   {name: 'Jenny', type: 'borsa', color: 'pink'},
 ];
 
-const copiaArrayObj = [...arrayObj];
-
-copiaArrayObj.forEach((element) => {
-    element["position"] = letterRandom();
+const modArrayObj = arrayObj.map((element) => {
+    const newElement = {...element, position: letterRandom()};
+    return newElement;
 })
 
 function letterRandom() {
@@ -28,4 +27,4 @@ function letterRandom() {
 }
 
 console.log(arrayObj);
-console.log(copiaArrayObj);
+console.log(modArrayObj);
