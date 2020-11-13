@@ -7,16 +7,9 @@
 const myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
 
 let numeroUno = prompt(`Inserisci un numero tra 0 e ${myArray.length-1}`);
-let numeroDue = prompt(`Inserisci un numero tra 0 e ${myArray.length-1}`);
+let numeroDue = prompt(`Inserisci un numero tra ${numeroUno} (escluso) e ${myArray.length-1}`);
 
-const arrayCompresi = myArray.filter((element, index) => {
-    if (index >= numeroUno && index <= numeroDue) {
-       return element
-    }
-    else if (index >= numeroDue && index <= numeroUno) {
-       return element
-    }
-});
+const arrayCompresi = myArray.filter((element, index) => index >= numeroUno && index <= numeroDue);
 
 document.getElementById("esercizio").innerHTML = `${arrayCompresi}`;
 console.log(arrayCompresi);
