@@ -27,6 +27,5 @@ for (let i = 0; i < bici.length; i++) {
     }
 }
 
-const {peso} = biciLeggera;
-const {nome} = biciLeggera;
+const {peso, nome} = biciLeggera;
 document.getElementById("esercizio").innerHTML = `La bici più leggera si chiama ${nome} e pesa ${peso}`;
